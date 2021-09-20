@@ -1,0 +1,157 @@
+// Typography
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+.medium {
+  font-weight: 500;
+  font-size: 13px;
+  opacity: 70%;
+  line-height: 18px;
+}
+
+.semiBold {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+// Primary
+
+$moderate-violet: hsl(263, 55%, 52%);
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$very-dark-blackish-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+
+// Neutral
+
+$light-gray: hsl(0, 0%, 81%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    height: 100vh;
+    display: grid;
+    background-color: $light-grayish-blue;
+    
+    .container {
+        display: grid;
+        gap: 24px 30px;
+        padding: 24px;
+        .section {
+            .bgQuote {
+                background-position: top right;
+                position: absolute;
+                right: 24px;
+                color: #A775F1;
+            }
+            position: relative;
+            border-radius: 8px;
+            padding: 32px 26px 26px 26px;
+            display: grid;
+            row-gap: 18px;
+            .profileInfo {
+            display: flex;
+            justify-content: flex-start;
+            img {
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                border: 2px solid #a775f1;
+            }
+            .headings {
+                position: relative;
+                padding-left: 15px;
+                h1 {
+                    font-size: 13px;
+                    font-weight: 500;
+                }
+                h2 {
+                    font-size: 11px;
+                    opacity: 50%;
+                    font-weight: 500;
+                }
+            }
+            }
+            p{
+                z-index: 0;
+            }
+        }
+        .daniel {
+            background-color: $moderate-violet;
+            color: $white;
+        }
+        .jonathan {
+            background-color: $very-dark-grayish-blue;
+            color: $white;
+        }
+        .kira {
+            background-color: $white;
+            color: $very-dark-blackish-blue;
+        }
+        .jeanette {
+            background-color: $white;
+            color: $very-dark-blackish-blue;
+        }
+        .patrick {
+            background-color: $very-dark-blackish-blue;
+            color: $white;
+        }   
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        font-family: "Barlow Semi Condensed", sans-serif;
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+
+        .container {
+            width: 1110px;
+            height: 572px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 24px 30px;
+            grid-template-areas:
+            "daniel daniel jonathan kira"
+            "jeanette patrick patrick kira";
+            .section {
+                .bgQuote {
+                    background-position: top right;
+                    position: absolute;
+                    right: 80px;
+                    color: #A775F1;
+                }
+                border-radius: 8px;
+                padding: 32px 26px;
+            }
+            
+            .daniel {
+                grid-area: daniel;
+                background-color: $moderate-violet;
+            }
+            .jonathan {
+                grid-area: jonathan;
+                background-color: $very-dark-grayish-blue;
+            }
+            .kira {
+                grid-area: kira;
+                background-color: $white;
+            }
+            .jeanette {
+                grid-area: jeanette;
+                background-color: $white;
+            }
+            .patrick {
+                grid-area: patrick;
+                background-color: $very-dark-blackish-blue;
+            }
+        }
+    }
+}

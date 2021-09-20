@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+.medium {
+  font-weight: 500;
+  font-size: 13px;
+  opacity: 70%;
+  line-height: 18px;
+}
+
+.semiBold {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  height: 100vh;
+  display: grid;
+  background-color: #ecf2f8;
+}
+body .container {
+  display: grid;
+  gap: 24px 30px;
+  padding: 24px;
+}
+body .container .section {
+  position: relative;
+  border-radius: 8px;
+  padding: 32px 26px 26px 26px;
+  display: grid;
+  row-gap: 18px;
+}
+body .container .section .bgQuote {
+  background-position: top right;
+  position: absolute;
+  right: 24px;
+  color: #A775F1;
+}
+body .container .section .profileInfo {
+  display: flex;
+  justify-content: flex-start;
+}
+body .container .section .profileInfo img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #a775f1;
+}
+body .container .section .profileInfo .headings {
+  position: relative;
+  padding-left: 15px;
+}
+body .container .section .profileInfo .headings h1 {
+  font-size: 13px;
+  font-weight: 500;
+}
+body .container .section .profileInfo .headings h2 {
+  font-size: 11px;
+  opacity: 50%;
+  font-weight: 500;
+}
+body .container .section p {
+  z-index: 0;
+}
+body .container .daniel {
+  background-color: #7541c8;
+  color: white;
+}
+body .container .jonathan {
+  background-color: #48556a;
+  color: white;
+}
+body .container .kira {
+  background-color: white;
+  color: #19212e;
+}
+body .container .jeanette {
+  background-color: white;
+  color: #19212e;
+}
+body .container .patrick {
+  background-color: #19212e;
+  color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+  body .container {
+    width: 1110px;
+    height: 572px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px 30px;
+    grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
+  }
+  body .container .section {
+    border-radius: 8px;
+    padding: 32px 26px;
+  }
+  body .container .section .bgQuote {
+    background-position: top right;
+    position: absolute;
+    right: 80px;
+    color: #A775F1;
+  }
+  body .container .daniel {
+    grid-area: daniel;
+    background-color: #7541c8;
+  }
+  body .container .jonathan {
+    grid-area: jonathan;
+    background-color: #48556a;
+  }
+  body .container .kira {
+    grid-area: kira;
+    background-color: white;
+  }
+  body .container .jeanette {
+    grid-area: jeanette;
+    background-color: white;
+  }
+  body .container .patrick {
+    grid-area: patrick;
+    background-color: #19212e;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
